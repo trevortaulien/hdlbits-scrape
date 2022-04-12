@@ -17,7 +17,7 @@ problems = [None] * len(vlgstats)
 for x, data in enumerate(vlgstats):
     problems[x] = data.string
 
-with open("problems.txt", "w") as f:
+with open("Problems/problems.txt", "w") as f:
     for problem in problems:
         f.write(problem)
         f.write("\n")
