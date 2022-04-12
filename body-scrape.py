@@ -11,12 +11,12 @@ requested_result = requests.get(url)
 website = BeautifulSoup(requested_result.text, "html.parser")
 
 ### Uncomment me to output the prettified HTML output to a file ###
-# with open("body-scrape-html.txt", "w") as f:
+# with open("Backup Html Scrapes/body-scrape-html.txt", "w") as f:
 #    f.writelines(website.prettify())
 ###################################################################
 
 ### Uncomment me to output the HTML text only(no tags) to output to a file ###
-# with open("body-scrape-html.txt", "w") as f:
+# with open("Backup Html Scrapes/body-scrape-html-text-only.txt", "w") as f:
 #    f.writelines(website.get_text())
 ##############################################################################
 
