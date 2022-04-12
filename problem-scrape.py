@@ -27,12 +27,12 @@ with open("Problems/problems.txt", "w") as f:
 ###
 
 ### Uncomment me to output the prettified HTML output to a file ###
-#with open("problem-scrape-html.txt", "w") as f:
+# with open("Backup Html Scrapes/problem-scrape-html.txt", "w") as f:
 #    f.writelines(website.prettify())
 ###################################################################
 
 ### Uncomment me to output the HTML text only(no tags) to output to a file ###
-# with open("problem-scrape-html.txt", "w") as f:
+# with open("Backup Html Scrapes/problem-scrape-html-text-only.txt", "w") as f:
 #    f.writelines(website.get_text())
 ##############################################################################
 
