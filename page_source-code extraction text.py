@@ -9,8 +9,9 @@ with open("seleniumPageSourcePretty.txt", "r") as w:
 
 CodeMirrorLines = website.find_all("pre", class_="CodeMirror-line")
 
-for item in CodeMirrorLines[2].next.contents:
-    print(item.string, end="")
+for line in CodeMirrorLines:
+    for text in line.next_element.contents:
+        print(text.string, end="")
+    print()
 
-print() # The purpose of this print is just to make the terminal output look cleaner
-print("I'm done :)")
+print("\nI'm done :)")
