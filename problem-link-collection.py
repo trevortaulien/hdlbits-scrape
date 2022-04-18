@@ -1,11 +1,13 @@
 print("I'm runnning")
 
+from asyncio import gather
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.select import Select
 from selenium.webdriver.firefox.service import Service
 from webdriver_manager.firefox import GeckoDriverManager
 from bs4 import BeautifulSoup
@@ -35,15 +37,34 @@ def go_to_stats(driver):
 
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div[3]/div/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/a')))
 
-def travel_to_each_problem(driver):
+def make_code_visible(driver):
+    dropdown = driver.find_element(By.ID,'uiload_select')
+    load_button = driver.find_element(By.ID,'uiload_load')
+    
+    select = Select(driver.find_element(By.ID,'uiload_select'))
+    action = ActionChains(driver)
+
+    
+    dropdown.location_once_scrolled_into_view
+    select.select_by_value('0')
+    action.move_to_element(load_button).click().perform()
+
+    #WebDriverWait(driver,10).until(EC.url_matches(('www.pausethescriptrighthereanddontgoanywhere.com')))
+
+#def gather_code(driver):
+
+
+def scrape(driver):
     links = driver.find_elements(By.CLASS_NAME,"vlgstat_link")
     action = ActionChains(driver)
 
-    for link in links:
+    for link in links[0:5]:
         link.location_once_scrolled_into_view
         action.move_to_element(link).click().perform()
         WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.CLASS_NAME, 'hb-box')))
-        print(link)    
+        make_code_visible(driver)
+        #gathered_code = gather_code(driver)
+        #store_code(gathered_code)
         driver.back()
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div[3]/div/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/a')))
 
@@ -55,7 +76,7 @@ login(driver)
 
 go_to_stats(driver)
 
-travel_to_each_problem(driver)
+scrape(driver)
 
 # driver.close()
  
