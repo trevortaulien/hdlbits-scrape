@@ -4,6 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.select import Select
@@ -38,6 +39,7 @@ def go_to_stats(driver):
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div[3]/div/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/a')))
 
 def make_code_visible(driver):
+
     load_button = driver.find_element(By.ID,'uiload_load')
     
     select = Select(driver.find_element(By.ID,'uiload_select'))
@@ -47,11 +49,10 @@ def make_code_visible(driver):
     WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.ID, 'uiload_load')))
     select.select_by_value('0')
     action.move_to_element(load_button).click().perform()
-    time.sleep(2)
-    #WebDriverWait(driver,10).until(EC.text_to_be_present_in_element((By.ID, 'uiload_load'), 'Loading...'))
-    #WebDriverWait(driver,10).until(EC.text_to_be_present_in_element((By.ID, 'uiload_load'), 'Load')) # THIS NEEDS TO BE IMPLEMENTED TO MEET TIMING
+    time.sleep(2) # This sleep is gross but not easy to defeat. Leaving as is for now because I cannot find consistent way to trigger if my HDL is loaded. I THINK to fix I would need to use beautifulsoup to extract code in beginning and then do it again after hitting load button then compare in a whiiile loop.
+    
 
-    #WebDriverWait(driver,10).until(EC.url_matches(('www.pausethescriptrighthereanddontgoanywhere.com')))
+#WebDriverWait(driver,10).until(EC.url_matches(('www.pausethescriptrighthereanddontgoanywhere.com')))
 
 def gather_code(driver):
     
