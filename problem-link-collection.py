@@ -1,6 +1,5 @@
 print("I'm runnning")
 
-from asyncio import gather
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -10,6 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.firefox.service import Service
 from webdriver_manager.firefox import GeckoDriverManager
+import time
 from bs4 import BeautifulSoup
 
 def login(driver):
@@ -28,11 +28,11 @@ def login(driver):
 
 def go_to_stats(driver):
     name_dropdown = driver.find_element(By.XPATH,'/html/body/div[1]/nav/section/ul[1]/li[4]/a') 
-    stats = driver.find_element(By.XPATH,'/html/body/div[1]/nav/section/ul[1]/li[4]/ul/li[4]/a')
+    stats = driver.find_element(By.ID,'n-My-Stats')
 
     action = ActionChains(driver)
     action.move_to_element(name_dropdown).perform()
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/nav/section/ul[1]/li[4]/ul/li[4]/a')))
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, 'n-My-Stats')))
     action.move_to_element(stats).click().perform()
 
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div[3]/div/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/a')))
@@ -47,15 +47,28 @@ def make_code_visible(driver):
     WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.ID, 'uiload_load')))
     select.select_by_value('0')
     action.move_to_element(load_button).click().perform()
+    time.sleep(2)
+    #WebDriverWait(driver,10).until(EC.text_to_be_present_in_element((By.ID, 'uiload_load'), 'Loading...'))
+    #WebDriverWait(driver,10).until(EC.text_to_be_present_in_element((By.ID, 'uiload_load'), 'Load')) # THIS NEEDS TO BE IMPLEMENTED TO MEET TIMING
 
     #WebDriverWait(driver,10).until(EC.url_matches(('www.pausethescriptrighthereanddontgoanywhere.com')))
 
 def gather_code(driver):
     
-    print(driver.name)
+    with open("VHDL-HTML/temp.html", "w") as temp_get:
+        temp_get.writelines(driver.page_source)
 
-    # with open("", "w") as s:
-    # s.writelines(driver.page_source)
+    with open("VHDL-HTML/temp.html", "r") as temp_read:
+        soup = BeautifulSoup(temp_read, "html.parser")
+        
+    CodeMirrorLines = soup.find_all("pre", class_="CodeMirror-line")
+
+    for line in CodeMirrorLines:
+        for text in line.next_element.contents:
+            print(text.string, end="")
+        print()
+
+    print()
 
 def scrape(driver):
     links = driver.find_elements(By.CLASS_NAME,"vlgstat_link")
@@ -63,6 +76,7 @@ def scrape(driver):
 
     for link in links[0:5]:
         link.location_once_scrolled_into_view
+        WebDriverWait(driver,10).until(EC.visibility_of(link))
         action.move_to_element(link).click().perform()
         WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.CLASS_NAME, 'hb-box')))
         make_code_visible(driver)
