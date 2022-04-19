@@ -50,26 +50,32 @@ def make_code_visible(driver):
     select.select_by_value('0')
     action.move_to_element(load_button).click().perform()
     time.sleep(2) # This sleep is gross but not easy to defeat. Leaving as is for now because I cannot find consistent way to trigger if my HDL is loaded. I THINK to fix I would need to use beautifulsoup to extract code in beginning and then do it again after hitting load button then compare in a whiiile loop.
+   
+def gather_and_store(driver):
     
-
-#WebDriverWait(driver,10).until(EC.url_matches(('www.pausethescriptrighthereanddontgoanywhere.com')))
-
-def gather_code(driver):
-    
-    with open("VHDL-HTML/temp.html", "w") as temp_get:
+    with open("HDL/temp.html", "w") as temp_get:
         temp_get.writelines(driver.page_source)
 
-    with open("VHDL-HTML/temp.html", "r") as temp_read:
+    with open("HDL/temp.html", "r") as temp_read:
         soup = BeautifulSoup(temp_read, "html.parser")
         
     CodeMirrorLines = soup.find_all("pre", class_="CodeMirror-line")
 
+    gathered_code = []
+
     for line in CodeMirrorLines:
         for text in line.next_element.contents:
-            print(text.string, end="")
-        print()
+            gathered_code.append(text.string)
+        gathered_code.append('\n')
 
-    print()
+    problem_name = soup.find("h2").string
+    gathered_name = problem_name.strip()
+
+    with open("HDL/" + gathered_name + ".v", "w") as file:
+        for element in gathered_code:
+            file.write(element)
+
+#WebDriverWait(driver,10).until(EC.url_matches(('www.pausethescriptrighthereanddontgoanywhere.com')))
 
 def scrape(driver):
     links = driver.find_elements(By.CLASS_NAME,"vlgstat_link")
@@ -81,9 +87,7 @@ def scrape(driver):
         action.move_to_element(link).click().perform()
         WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.CLASS_NAME, 'hb-box')))
         make_code_visible(driver)
-        #gathered_code =
-        gather_code(driver)
-        #store_code(gathered_code)
+        gather_and_store(driver)
         driver.back()
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div[3]/div/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/a')))
 
