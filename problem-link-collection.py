@@ -40,22 +40,43 @@ def go_to_stats(driver):
 
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div[3]/div/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/a')))
 
+def visible_code_capture(driver):
+
+    with open("temp.html", "w") as temp_write:
+        temp_write.writelines(driver.page_source)
+
+    with open("temp.html", "r") as temp_read:
+        soup = BeautifulSoup(temp_read, "html.parser")
+
+    CodeMirrorLines = soup.find_all("pre", class_="CodeMirror-line")
+
+    gathered_code = []
+
+    for line in CodeMirrorLines:
+        for text in line.next_element.contents:
+            gathered_code.append(text.string)
+        gathered_code.append('\n')
+
+    return gathered_code
+
 def make_code_visible(driver):
 
     load_button = driver.find_element(By.ID,'uiload_load')
     select = Select(driver.find_element(By.ID,'uiload_select'))
     action = ActionChains(driver)
-
+    pre_load_capture = visible_code_capture(driver)
     load_button.location_once_scrolled_into_view
     WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.ID, 'uiload_load')))
     select.select_by_index('1')
     action.move_to_element(load_button).click().perform()
-    time.sleep(2) # This sleep is gross but not easy to defeat. Leaving as is for now because I cannot find consistent way to trigger if my HDL is loaded. I THINK to fix I would need to use beautifulsoup to extract code in beginning and then do it again after hitting load button then compare in a whiiile loop.
+    while(pre_load_capture == visible_code_capture(driver)):
+        pass #should this be a continue?
+    #time.sleep(2) # This sleep is gross but not easy to defeat. Leaving as is for now because I cannot find consistent way to trigger if my HDL is loaded. I THINK to fix I would need to use beautifulsoup to extract code in beginning and then do it again after hitting load button then compare in a whiiile loop.
    
 def gather_and_store(driver, problem_number):
     
-    with open("temp.html", "w") as temp_get:
-        temp_get.writelines(driver.page_source)
+    with open("temp.html", "w") as temp_write:
+        temp_write.writelines(driver.page_source)
 
     with open("temp.html", "r") as temp_read:
         soup = BeautifulSoup(temp_read, "html.parser")
