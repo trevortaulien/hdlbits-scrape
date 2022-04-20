@@ -51,12 +51,12 @@ def make_code_visible(driver):
     action.move_to_element(load_button).click().perform()
     time.sleep(2) # This sleep is gross but not easy to defeat. Leaving as is for now because I cannot find consistent way to trigger if my HDL is loaded. I THINK to fix I would need to use beautifulsoup to extract code in beginning and then do it again after hitting load button then compare in a whiiile loop.
    
-def gather_and_store(driver):
+def gather_and_store(driver, problem_number):
     
-    with open("HDL/temp.html", "w") as temp_get:
+    with open("temp.html", "w") as temp_get:
         temp_get.writelines(driver.page_source)
 
-    with open("HDL/temp.html", "r") as temp_read:
+    with open("temp.html", "r") as temp_read:
         soup = BeautifulSoup(temp_read, "html.parser")
         
     CodeMirrorLines = soup.find_all("pre", class_="CodeMirror-line")
@@ -69,27 +69,27 @@ def gather_and_store(driver):
         gathered_code.append('\n')
 
     problem_name = soup.find("h2").string
-    gathered_name = problem_name.strip()
+    problem_name = problem_name.strip().replace("/","_")
 
-    with open("HDL/" + gathered_name + ".v", "w") as file:
+    with open("HDL/" + str(problem_number) + ". " + problem_name + ".v", "w") as file:
         for element in gathered_code:
             file.write(element)
-
-#WebDriverWait(driver,10).until(EC.url_matches(('www.pausethescriptrighthereanddontgoanywhere.com')))
 
 def scrape(driver):
     links = driver.find_elements(By.CLASS_NAME,"vlgstat_link")
     action = ActionChains(driver)
 
-    for link in links[0:5]:
+    for problem_number, link in enumerate(links[45:49]):
         link.location_once_scrolled_into_view
         WebDriverWait(driver,10).until(EC.visibility_of(link))
         action.move_to_element(link).click().perform()
         WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.CLASS_NAME, 'hb-box')))
         make_code_visible(driver)
-        gather_and_store(driver)
+        gather_and_store(driver, problem_number)
         driver.back()
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div[3]/div/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/a')))
+
+#WebDriverWait(driver,10).until(EC.url_matches(('www.pausethescriptrighthereanddontgoanywhere.com')))
 
 driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
 

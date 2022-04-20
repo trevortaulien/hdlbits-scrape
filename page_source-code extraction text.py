@@ -23,7 +23,6 @@ print(line_list)
 file_name = website.find("h2").string
 print(file_name)
 file_name_stripped = file_name.strip()
-print(file_name_stripped)
 
 with open("Selenium Testing/" + file_name.strip() + ".v", "w") as t:
     for element in line_list:
