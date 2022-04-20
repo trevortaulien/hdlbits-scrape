@@ -48,7 +48,7 @@ def make_code_visible(driver):
 
     load_button.location_once_scrolled_into_view
     WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.ID, 'uiload_load')))
-    select.select_by_value('0')
+    select.select_by_index('1')
     action.move_to_element(load_button).click().perform()
     time.sleep(2) # This sleep is gross but not easy to defeat. Leaving as is for now because I cannot find consistent way to trigger if my HDL is loaded. I THINK to fix I would need to use beautifulsoup to extract code in beginning and then do it again after hitting load button then compare in a whiiile loop.
    
@@ -108,5 +108,5 @@ scrape(driver)
 
 driver.close()
 
-print("%s seconds " %(time.time() - start_time))
+print("%s seconds " %(time.time() - start_time)) # First sucessful run took 748.3380181789398 seconds using sleep()
 print("I'm done :)")
