@@ -13,6 +13,8 @@ from webdriver_manager.firefox import GeckoDriverManager
 import time
 from bs4 import BeautifulSoup
 
+start_time = time.time()
+
 def login(driver):
     username_element = driver.find_element(By.NAME,"vlg_username")
     password_element = driver.find_element(By.NAME,"password")
@@ -41,7 +43,6 @@ def go_to_stats(driver):
 def make_code_visible(driver):
 
     load_button = driver.find_element(By.ID,'uiload_load')
-    
     select = Select(driver.find_element(By.ID,'uiload_select'))
     action = ActionChains(driver)
 
@@ -68,10 +69,14 @@ def gather_and_store(driver, problem_number):
             gathered_code.append(text.string)
         gathered_code.append('\n')
 
+    # for i, random_none in enumerate(gathered_code):
+    #     if random_none == None:
+    #         gathered_code[i] = ""
+
     problem_name = soup.find("h2").string
     problem_name = problem_name.strip().replace("/","_")
 
-    with open("HDL/" + str(problem_number) + ". " + problem_name + ".v", "w") as file:
+    with open("HDL/" + str(problem_number + 1) + ". " + problem_name + ".v", "w") as file:
         for element in gathered_code:
             file.write(element)
 
@@ -79,7 +84,7 @@ def scrape(driver):
     links = driver.find_elements(By.CLASS_NAME,"vlgstat_link")
     action = ActionChains(driver)
 
-    for problem_number, link in enumerate(links[45:49]):
+    for problem_number, link in enumerate(links):
         link.location_once_scrolled_into_view
         WebDriverWait(driver,10).until(EC.visibility_of(link))
         action.move_to_element(link).click().perform()
@@ -101,6 +106,7 @@ go_to_stats(driver)
 
 scrape(driver)
 
-# driver.close()
- 
+driver.close()
+
+print("%s seconds " %(time.time() - start_time))
 print("I'm done :)")
