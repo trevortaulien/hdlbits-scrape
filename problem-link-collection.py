@@ -63,6 +63,7 @@ def make_code_visible(driver):
 
     load_button = driver.find_element(By.ID,'uiload_load')
     select = Select(driver.find_element(By.ID,'uiload_select'))
+    print(len(select.options))
     action = ActionChains(driver)
 
     pre_load_capture = visible_code_capture(driver)
@@ -76,34 +77,27 @@ def make_code_visible(driver):
         raise print("Index of dropdown not successful :(")
     action.move_to_element(load_button).click().perform()
     while(pre_load_capture == visible_code_capture(driver)):
-        pass #should this be a continue?
-    #time.sleep(2) # This sleep is gross but not easy to defeat. Leaving as is for now because I cannot find consistent way to trigger if my HDL is loaded. I THINK to fix I would need to use beautifulsoup to extract code in beginning and then do it again after hitting load button then compare in a whiiile loop.
-   
-def gather_and_store(driver, problem_number):
-    
+        pass
+
+def problem_name_capture(driver):
+
     with open("temp.html", "w") as temp_write:
         temp_write.writelines(driver.page_source)
 
     with open("temp.html", "r") as temp_read:
         soup = BeautifulSoup(temp_read, "html.parser")
-        
-    CodeMirrorLines = soup.find_all("pre", class_="CodeMirror-line")
-
-    gathered_code = []
-
-    for line in CodeMirrorLines:
-        for text in line.next_element.contents:
-            gathered_code.append(text.string)
-        gathered_code.append('\n')
-
-    # for i, random_none in enumerate(gathered_code):
-    #     if random_none == None:
-    #         gathered_code[i] = ""
 
     problem_name = soup.find("h2").string
     problem_name = problem_name.strip().replace("/","_")
 
-    with open("HDL/" + str(problem_number + 1) + ". " + problem_name + ".v", "w") as file:
+    return problem_name
+
+def gather_and_store(driver, problem_number):
+    
+    gathered_code = visible_code_capture(driver)
+    problem_name = problem_name_capture(driver)
+
+    with open("HDL/" + str(problem_number + 1).zfill(3) + ". " + problem_name + ".v", "w") as file:
         for element in gathered_code:
             file.write(element)
 
@@ -115,7 +109,7 @@ def scrape(driver):
         link.location_once_scrolled_into_view
         WebDriverWait(driver,10).until(EC.visibility_of(link))
         action.move_to_element(link).click().perform()
-        WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.CLASS_NAME, 'hb-box')))
+        WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.CLASS_NAME, 'hb-box'))) # this may be to source of the select by index bug because we are instantiating the select object after only a early tag is loaded
         make_code_visible(driver)
         gather_and_store(driver, problem_number)
         driver.back()
