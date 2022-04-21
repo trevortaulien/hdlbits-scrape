@@ -64,10 +64,16 @@ def make_code_visible(driver):
     load_button = driver.find_element(By.ID,'uiload_load')
     select = Select(driver.find_element(By.ID,'uiload_select'))
     action = ActionChains(driver)
+
     pre_load_capture = visible_code_capture(driver)
     load_button.location_once_scrolled_into_view
     WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.ID, 'uiload_load')))
-    select.select_by_index('1')
+    try:
+        select.select_by_index(1)
+    except:
+        print("select.options:")
+        print(select.options)
+        raise print("Index of dropdown not successful :(")
     action.move_to_element(load_button).click().perform()
     while(pre_load_capture == visible_code_capture(driver)):
         pass #should this be a continue?
@@ -129,5 +135,6 @@ scrape(driver)
 
 driver.close()
 
-print("%s seconds " %(time.time() - start_time)) # First sucessful run took 748.3380181789398 seconds using sleep()
+print("%s seconds " %(time.time() - start_time))    # First sucessful run took 748.3380181789398 seconds using sleep()
+                                                    # When not using sleep run took 477.48190474510193 seconds 
 print("I'm done :)")
