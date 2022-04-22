@@ -40,13 +40,19 @@ def go_to_stats(driver):
 
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div[3]/div/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/a')))
 
-def visible_code_capture(driver):
+def make_soup(driver):
 
     with open("temp.html", "w") as temp_write:
         temp_write.writelines(driver.page_source)
 
     with open("temp.html", "r") as temp_read:
         soup = BeautifulSoup(temp_read, "html.parser")
+
+    return soup
+
+def visible_code_capture(driver):
+
+    soup = make_soup(driver)
 
     CodeMirrorLines = soup.find_all("pre", class_="CodeMirror-line")
 
@@ -81,11 +87,7 @@ def make_code_visible(driver):
 
 def problem_name_capture(driver):
 
-    with open("temp.html", "w") as temp_write:
-        temp_write.writelines(driver.page_source)
-
-    with open("temp.html", "r") as temp_read:
-        soup = BeautifulSoup(temp_read, "html.parser")
+    soup = make_soup(driver)
 
     problem_name = soup.find("h2").string
     problem_name = problem_name.strip().replace("/","_")
