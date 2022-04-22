@@ -118,18 +118,12 @@ def scrape(driver):
         driver.back()
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div[3]/div/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/a')))
 
-#WebDriverWait(driver,10).until(EC.url_matches(('www.pausethescriptrighthereanddontgoanywhere.com')))
-
 driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
-
 driver.get("https://hdlbits.01xz.net/wiki/Special:VlgLogin")
 
 login(driver)
-
 go_to_stats(driver)
-
 scrape(driver)
-
 driver.close()
 
 print("%s seconds " %(time.time() - start_time))    # First sucessful run took 748.3380181789398 seconds using sleep()
