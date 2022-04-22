@@ -5146,3 +5146,351 @@ console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message f
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
 JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
 1650572635606	Marionette	INFO	Stopped listening on port 33597
+1650579404344	geckodriver	INFO	Listening on 127.0.0.1:43137
+1650579404868	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "52125" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileKmntrP"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650579406424	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileKmntrP/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52125/devtools/browser/d98786ed-67cf-497d-a00b-56c25b3d5fa9
+1650579408730	Marionette	INFO	Listening on port 36263
+Read port: 36263
+1650579408823	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650579431201	Marionette	INFO	Stopped listening on port 36263
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1650579493008	geckodriver	INFO	Listening on 127.0.0.1:53299
+1650579493546	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "32885" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileDNLl3T"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650579495131	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileDNLl3T/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:32885/devtools/browser/3440436c-83fc-42c8-8593-54380e3ea001
+1650579497374	Marionette	INFO	Listening on port 37003
+Read port: 37003
+1650579497481	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650579514906	Marionette	INFO	Stopped listening on port 37003
+1650579573238	geckodriver	INFO	Listening on 127.0.0.1:38287
+1650579573743	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "50531" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileT4cMsN"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650579575350	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileT4cMsN/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50531/devtools/browser/79474d83-4860-45e9-8d7e-1ce3e307b21f
+1650579577445	Marionette	INFO	Listening on port 44987
+Read port: 44987
+1650579577477	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650579601663	Marionette	INFO	Stopped listening on port 44987
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1650579619475	geckodriver	INFO	Listening on 127.0.0.1:41209
+1650579619479	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "60449" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileIOBgvj"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650579621204	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileIOBgvj/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60449/devtools/browser/84bd77b7-a916-430d-922e-93eaa20edaef
+1650579623321	Marionette	INFO	Listening on port 37621
+Read port: 37621
+1650579623430	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650579654517	Marionette	INFO	Stopped listening on port 37621
+1650579727114	geckodriver	INFO	Listening on 127.0.0.1:60855
+1650579727629	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "43773" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileGGyV6H"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650579729124	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileGGyV6H/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:43773/devtools/browser/0b7a23c4-b2d2-4433-a9af-fd9c9eafaf64
+1650579731711	Marionette	INFO	Listening on port 33237
+Read port: 33237
+1650579731809	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650579764261	Marionette	INFO	Stopped listening on port 33237
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: Send(msgname=PBrowser::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+1650580498334	geckodriver	INFO	Listening on 127.0.0.1:38219
+1650580498839	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "34375" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileZSCTRI"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650580500346	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZSCTRI/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:34375/devtools/browser/bdd912b2-e0d6-4efe-a419-9f65a8c150d9
+1650580502904	Marionette	INFO	Listening on port 33133
+Read port: 33133
+1650580502981	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650580534923	Marionette	INFO	Stopped listening on port 33133
+1650580604761	geckodriver	INFO	Listening on 127.0.0.1:39201
+1650580605266	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "35089" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilenfZx3Q"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650580606950	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilenfZx3Q/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:35089/devtools/browser/4e341936-259d-4147-b9c3-e07a12ef6615
+1650580609406	Marionette	INFO	Listening on port 45303
+Read port: 45303
+1650580609512	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650580640900	Marionette	INFO	Stopped listening on port 45303
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1650580689482	geckodriver	INFO	Listening on 127.0.0.1:34437
+1650580689992	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "42337" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileHxxWEC"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650580691825	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileHxxWEC/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:42337/devtools/browser/0ee6b29d-7686-426c-8d3e-85ab8f96f2af
+1650580694482	Marionette	INFO	Listening on port 41079
+Read port: 41079
+1650580694571	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650580712783	Marionette	INFO	Stopped listening on port 41079
+1650580928343	geckodriver	INFO	Listening on 127.0.0.1:35797
+1650580928346	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "46469" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilecxe3LK"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650580930056	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilecxe3LK/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:46469/devtools/browser/37e51bc5-a4dc-460a-96d0-d74182d3772d
+1650580933092	Marionette	INFO	Listening on port 45695
+Read port: 45695
+1650580933203	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650580952186	Marionette	INFO	Stopped listening on port 45695
+1650581947796	geckodriver	INFO	Listening on 127.0.0.1:54007
+1650581948303	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "59785" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilePZyJLZ"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650581949921	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilePZyJLZ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59785/devtools/browser/54a2468f-9bd5-4c33-9135-98dbce163731
+1650581952989	Marionette	INFO	Listening on port 34733
+Read port: 34733
+1650581953058	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650581971775	Marionette	INFO	Stopped listening on port 34733
+1650582665210	geckodriver	INFO	Listening on 127.0.0.1:58327
+1650582665720	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "56243" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiledPJjV4"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650582667927	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiledPJjV4/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56243/devtools/browser/18803600-31ba-4461-a9a4-d87810cb1964
+1650582671102	Marionette	INFO	Listening on port 44913
+Read port: 44913
+1650582671209	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650582690379	Marionette	INFO	Stopped listening on port 44913
+1650582875293	geckodriver	INFO	Listening on 127.0.0.1:38153
+1650582875305	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "54157" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileRbesZS"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650582876919	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileRbesZS/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54157/devtools/browser/53850ac4-f832-437d-ba02-c0fa47214333
+1650582879413	Marionette	INFO	Listening on port 33185
+Read port: 33185
+1650582879447	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650582897508	Marionette	INFO	Stopped listening on port 33185
+1650583264257	geckodriver	INFO	Listening on 127.0.0.1:38111
+1650583264762	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "39881" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile9ZjZH9"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650583266270	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile9ZjZH9/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:39881/devtools/browser/e73272ac-c01e-4dd1-8468-d6cafe5736bd
+1650583268628	Marionette	INFO	Listening on port 45093
+Read port: 45093
+1650583268734	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650583286370	Marionette	INFO	Stopped listening on port 45093
+1650583507448	geckodriver	INFO	Listening on 127.0.0.1:36131
+1650583507979	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "43449" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileAmmscm"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650583509513	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileAmmscm/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:43449/devtools/browser/a40f0c1a-a682-4a11-9c29-aab2322cc878
+1650583511792	Marionette	INFO	Listening on port 46547
+Read port: 46547
+1650583511826	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650583526929	Marionette	INFO	Stopped listening on port 46547
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1650583579624	geckodriver	INFO	Listening on 127.0.0.1:41653
+1650583579630	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "60221" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile4tRD9U"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650583581437	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile4tRD9U/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60221/devtools/browser/7f3cb0c3-cb4f-4e9a-bbf1-83ab1fff89b6
+1650583583777	Marionette	INFO	Listening on port 39903
+Read port: 39903
+1650583583872	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650583601819	Marionette	INFO	Stopped listening on port 39903
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1650583645923	geckodriver	INFO	Listening on 127.0.0.1:39077
+1650583646428	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "59175" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileUyggkF"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650583648640	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileUyggkF/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59175/devtools/browser/a4b84bf1-ed77-4280-9f89-7dd3c5af3833
+1650583650778	Marionette	INFO	Listening on port 38949
+Read port: 38949
+1650583650873	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650583662088	Marionette	INFO	Stopped listening on port 38949
+1650583688246	geckodriver	INFO	Listening on 127.0.0.1:51007
+1650583688750	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "44445" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileIl1frw"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650583690286	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileIl1frw/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:44445/devtools/browser/0b1863ce-0aba-499b-b1b1-a2907a6df6c7
+1650583692518	Marionette	INFO	Listening on port 36963
+Read port: 36963
+1650583692604	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650583701534	Marionette	INFO	Stopped listening on port 36963
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1650583713321	geckodriver	INFO	Listening on 127.0.0.1:36259
+1650583713328	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "58845" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile9WBGSS"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650583715444	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile9WBGSS/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58845/devtools/browser/85253e79-8ec6-4009-86d2-52c3d3e7afe9
+1650583718106	Marionette	INFO	Listening on port 43233
+Read port: 43233
+1650583718220	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650583727480	Marionette	INFO	Stopped listening on port 43233
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1650583863000	geckodriver	INFO	Listening on 127.0.0.1:42613
+1650583863505	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "43793" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileZyFqXP"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650583865028	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZyFqXP/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:43793/devtools/browser/e8f042b5-a5c8-413b-a9c3-faab707deeb1
+1650583867909	Marionette	INFO	Listening on port 45921
+Read port: 45921
+1650583867951	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650583879327	Marionette	INFO	Stopped listening on port 45921
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1650583892883	geckodriver	INFO	Listening on 127.0.0.1:40043
+1650583893389	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "42817" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileaEzFnK"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650583895065	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileaEzFnK/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:42817/devtools/browser/94563201-a96c-43bb-aa3b-a452bf897159
+1650583897393	Marionette	INFO	Listening on port 45449
+Read port: 45449
+1650583897440	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650583940132	Marionette	INFO	Stopped listening on port 45449
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1650583955414	geckodriver	INFO	Listening on 127.0.0.1:40595
+1650583955918	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "36005" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile6ITibG"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650583957674	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile6ITibG/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:36005/devtools/browser/39f9993d-0a3f-43ce-ac3f-2f0b0823484f
+1650583959950	Marionette	INFO	Listening on port 34015
+Read port: 34015
+1650583960066	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650583978080	Marionette	INFO	Stopped listening on port 34015
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1650634785746	geckodriver	INFO	Listening on 127.0.0.1:44137
+1650634786254	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "33089" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilepJ3vPb"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650634788452	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilepJ3vPb/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:33089/devtools/browser/c33f0a94-70cc-4c5a-a0b7-9d2c7f0f50e2
+1650634791266	Marionette	INFO	Listening on port 45341
+Read port: 45341
+1650634791325	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650634823840	Marionette	INFO	Stopped listening on port 45341
+console.error: services.settings: 
+  main/quicksuggest Signature failed  TypeError: NetworkError: Network request failed
+1650634965424	geckodriver	INFO	Listening on 127.0.0.1:48567
+1650634965931	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "34695" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilegpS8lJ"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650634968159	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilegpS8lJ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:34695/devtools/browser/946a710b-29cf-483a-9535-6db011cf7367
+1650634970386	Marionette	INFO	Listening on port 34455
+Read port: 34455
+1650634970488	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650634989223	Marionette	INFO	Stopped listening on port 34455
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1650635183021	geckodriver	INFO	Listening on 127.0.0.1:44031
+1650635183526	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "34433" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile9tCF4x"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1650635185594	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile9tCF4x/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:34433/devtools/browser/2e280bb1-5b0d-4f05-a37b-43c4c87521d3
+1650635187770	Marionette	INFO	Listening on port 37347
+Read port: 37347
+1650635187868	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://hdlbits.01xz.net"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650635716068	Marionette	INFO	Stopped listening on port 37347

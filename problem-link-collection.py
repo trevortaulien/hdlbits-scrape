@@ -63,7 +63,7 @@ def make_code_visible(driver):
 
     load_button = driver.find_element(By.ID,'uiload_load')
     select = Select(driver.find_element(By.ID,'uiload_select'))
-    print(len(select.options))
+    print(select.options)
     action = ActionChains(driver)
 
     pre_load_capture = visible_code_capture(driver)
@@ -109,7 +109,8 @@ def scrape(driver):
         link.location_once_scrolled_into_view
         WebDriverWait(driver,10).until(EC.visibility_of(link))
         action.move_to_element(link).click().perform()
-        WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.CLASS_NAME, 'hb-box'))) # this may be to source of the select by index bug because we are instantiating the select object after only a early tag is loaded
+        WebDriverWait(driver,10).until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'CodeMirror-line'))) # this may be to source of the select by index bug because we are instantiating the select object after only a early tag is loaded
+        #time.sleep(3)
         make_code_visible(driver)
         gather_and_store(driver, problem_number)
         driver.back()
@@ -131,4 +132,5 @@ driver.close()
 
 print("%s seconds " %(time.time() - start_time))    # First sucessful run took 748.3380181789398 seconds using sleep()
                                                     # When not using sleep run took 477.48190474510193 seconds 
+                                                    # With select by index bug fix run took 534.0140681266785 seconds 
 print("I'm done :)")
