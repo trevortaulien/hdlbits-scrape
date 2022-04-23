@@ -2,7 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-#from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.select import Select
@@ -106,8 +105,7 @@ def scrape(driver):
         link.location_once_scrolled_into_view
         WebDriverWait(driver,10).until(EC.visibility_of(link))
         action.move_to_element(link).click().perform()
-        WebDriverWait(driver,10).until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'CodeMirror-line'))) # this may be to source of the select by index bug because we are instantiating the select object after only a early tag is loaded
-        #time.sleep(3)
+        WebDriverWait(driver,10).until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'CodeMirror-line')))
         make_code_visible(driver)
         gather_and_store(driver, problem_number)
         driver.back()
