@@ -1,10 +1,8 @@
-print("I'm runnning")
-
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.remote.webelement import WebElement
+#from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.select import Select
@@ -12,8 +10,6 @@ from selenium.webdriver.firefox.service import Service
 from webdriver_manager.firefox import GeckoDriverManager
 import time
 from bs4 import BeautifulSoup
-
-start_time = time.time()
 
 def login(driver):
     username_element = driver.find_element(By.NAME,"vlg_username")
@@ -69,7 +65,6 @@ def make_code_visible(driver):
 
     load_button = driver.find_element(By.ID,'uiload_load')
     select = Select(driver.find_element(By.ID,'uiload_select'))
-    print(select.options)
     action = ActionChains(driver)
 
     pre_load_capture = visible_code_capture(driver)
@@ -118,15 +113,20 @@ def scrape(driver):
         driver.back()
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[2]/div[3]/div/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/a')))
 
-driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
-driver.get("https://hdlbits.01xz.net/wiki/Special:VlgLogin")
+def main():
+    start_time = time.time()
+    print("I'm runnning")
 
-login(driver)
-go_to_stats(driver)
-scrape(driver)
-driver.close()
+    driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
+    driver.get("https://hdlbits.01xz.net/wiki/Special:VlgLogin")
 
-print("%s seconds " %(time.time() - start_time))    # First sucessful run took 748.3380181789398 seconds using sleep()
-                                                    # When not using sleep run took 477.48190474510193 seconds 
-                                                    # With select by index bug fix run took 534.0140681266785 seconds 
-print("I'm done :)")
+    login(driver)
+    go_to_stats(driver)
+    scrape(driver)
+    driver.close()
+
+    print("%s seconds " %(time.time() - start_time))
+    print("I'm done :)")
+
+if __name__ == "__main__":
+    main()
