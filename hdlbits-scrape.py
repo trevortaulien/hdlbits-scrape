@@ -15,8 +15,8 @@ def login(driver):
     password_element = driver.find_element(By.NAME,"password")
     login_element = driver.find_element(By.NAME,"login")
 
-    username = "trevortaulien"
-    password = "trevor_bits_taulien"
+    username = "YOUR-USERNAME-HERE"
+    password = "YOUR-PASSWORD-HERE"
 
     username_element.send_keys(username)
     password_element.send_keys(password)
